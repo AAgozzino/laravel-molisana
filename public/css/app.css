@@ -6,13 +6,23 @@
   padding: 0;
 }
 
+h3 {
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
 
-header .wrapper {
+.wrapper {
   max-width: 1024px;
   margin: auto;
+}
+
+header .wrapper {
   text-align: center;
 }
 
@@ -43,5 +53,37 @@ header .wrapper .nav-list-item a {
 
 header .wrapper .nav-list-item a.active {
   background-color: #B3E5FC;
+}
+
+footer {
+  color: #7B8495;
+}
+
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer .row .box {
+  width: calc(100%/3);
+  flex-shrink: 0;
+}
+
+footer .row .box-list-item {
+  list-style: none;
+  line-height: 1.7;
+}
+
+footer .row .box-list-item a {
+  color: #7B8495;
+  text-decoration: none;
+}
+
+footer .bottom {
+  background-image: url("/images/footer-montagne-bottom.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+  height: 140px;
 }
 

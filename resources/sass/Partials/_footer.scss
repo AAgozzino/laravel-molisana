@@ -1,0 +1,34 @@
+footer{
+    color: $footerColorTxt;
+
+    .row{
+        @include displayFlex;
+        flex-wrap: wrap;
+
+        .box{
+            width: calc(100%/3);
+            flex-shrink: 0;
+            
+            &-list{
+                &-item{
+                    list-style: none;
+                    line-height: 1.7;
+
+                    a{
+                        color: $footerColorTxt;
+                        text-decoration: none;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom{
+        background-image: url('/images/footer-montagne-bottom.jpg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        width: 100%;
+        height: 140px;
+    }
+}

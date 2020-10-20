@@ -4,6 +4,20 @@
     padding: 0;
 }
 
+// TYPOGRAPHY
+h3{
+    font-size: 25px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+// /TYPOGRAPHY
+
 body{
     font-family: $mainFont;
+}
+
+.wrapper{
+    max-width: 1024px;
+    margin: auto;
 }
