@@ -1,3 +1,4 @@
+@extends('layouts.main')
 @php
     $data = '[
         {
@@ -141,42 +142,36 @@
     
 @endphp
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Pasta Molisana</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    </head>
-    <body>
-        <h2>Lunga</h2>
-            <ul>
-                @foreach ($lunga as $prodotto)
-                    <li>
-                        <img src="{{$prodotto["src"]}}" alt="">
-                        <h3>{{$prodotto["titolo"]}}</h3>
-                    </li>
-                @endforeach
-            </ul>
-        <h2>Corta</h2>
-            <ul>
-                @foreach ($corta as $prodotto)
-                    <li>
-                        <img src="{{$prodotto["src"]}}" alt="">
-                        <h3>{{$prodotto["titolo"]}}</h3>
-                    </li>
-                @endforeach
-            </ul>
-        <h2>Cortissima</h2>
-            <ul>
-                @foreach ($cortissima as $prodotto)
-                    <li>
-                        <img src="{{$prodotto["src"]}}" alt="">
-                        <h3>{{$prodotto["titolo"]}}</h3>
-                    </li>
-                @endforeach
-            </ul>
-    </body>
-</html>
+@section('title')
+    La Molisana
+@endsection
+
+@section('mainContent')
+<h2>Lunga</h2>
+<ul>
+    @foreach ($lunga as $prodotto)
+        <li>
+            <img src="{{$prodotto["src"]}}" alt="">
+            <h3>{{$prodotto["titolo"]}}</h3>
+        </li>
+    @endforeach
+</ul>
+<h2>Corta</h2>
+<ul>
+    @foreach ($corta as $prodotto)
+        <li>
+            <img src="{{$prodotto["src"]}}" alt="">
+            <h3>{{$prodotto["titolo"]}}</h3>
+        </li>
+    @endforeach
+</ul>
+<h2>Cortissima</h2>
+<ul>
+    @foreach ($cortissima as $prodotto)
+        <li>
+            <img src="{{$prodotto["src"]}}" alt="">
+            <h3>{{$prodotto["titolo"]}}</h3>
+        </li>
+    @endforeach
+</ul>
+@endsection
