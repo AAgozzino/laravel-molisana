@@ -1,0 +1,32 @@
+header{
+    .wrapper{
+        max-width: 1024px;
+        margin: auto;
+        text-align: center;
+
+        .logo{
+            padding: 20px 0;
+        }
+
+        .nav{
+            margin-top: 20px;
+            &-list{
+                @include listInLine;
+
+                &-item{
+                    margin: 0 5px;
+                    a{
+                        text-decoration: none;
+                        color: $navColorTxt;
+                        font-size: 24px;
+                        padding: 20px 10px;
+
+                        &.active{
+                            background-color: $bgNavActive;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
