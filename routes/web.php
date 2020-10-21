@@ -18,7 +18,16 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/prodotti', function () {
-    return view('prodotti');
+    $data = config('pasta');
+
+    $paste = [];
+
+    foreach ($data as $key => $prodotto) {
+        $prodotto["id"] = $key;
+        $paste[$prodotto["tipo"]][] = $prodotto;
+    }
+
+    return view('prodotti', ["paste" => $paste]);
 })->name('products');
 
 Route::get('/news', function () {
