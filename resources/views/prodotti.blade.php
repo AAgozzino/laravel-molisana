@@ -5,9 +5,8 @@
 @endsection
 
 @section('mainContent')
-<div class="main">
-    <div class="wrapper">
-        <h1>Prodotti</h1>
+    <div class="main">
+        <div class="wrapper">
             @if (!empty($paste))
                 @foreach ( $paste as $key => $tipo)
                     <section id="{{$key}}">

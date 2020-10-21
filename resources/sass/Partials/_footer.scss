@@ -4,6 +4,7 @@ footer{
     .row{
         @include displayFlex;
         flex-wrap: wrap;
+        padding-top: 70px;
 
         .box{
             width: calc(100%/3);

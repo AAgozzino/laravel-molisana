@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+h1 {
+  color: #00156E;
+  font-weight: normal;
+}
+
 h2 {
   font-size: 28px;
   font-weight: normal;
@@ -127,6 +132,29 @@ header .wrapper .nav-list-item a.active {
   display: flex;
 }
 
+.card {
+  background-color: #B7DAE5;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.card-title {
+  padding-top: 70px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-description {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding-bottom: 50px;
+  color: #00156E;
+}
+
 footer {
   color: #7B8495;
 }
@@ -134,6 +162,7 @@ footer {
 footer .row {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 70px;
 }
 
 footer .row .box {

@@ -1,0 +1,22 @@
+.card{
+    background-color: #B7DAE5;
+    margin-top: 20px;
+    width: 100%;
+
+    &-title{
+        padding-top: 70px;
+        text-align: center;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    &-description{
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.5;
+        padding-bottom: 50px;
+        color: $mainColorTxt;
+    }
+}
