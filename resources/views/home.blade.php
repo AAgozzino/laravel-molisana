@@ -8,12 +8,13 @@
     $cortissima = [];
 
     foreach ($data as $key => $prodotto) {
+        $prodotto["id"] = $key;
         if ($prodotto["tipo"] == "lunga") {
-            $lunga[$key] = $prodotto;
+            $lunga[] = $prodotto;
         } elseif ($prodotto["tipo"] == "corta") {
-            $corta[$key] = $prodotto;
+            $corta[] = $prodotto;
         } elseif ($prodotto["tipo"] == "cortissima") {
-            $cortissima[$key] = $prodotto;
+            $cortissima[] = $prodotto;
         }
     };
     
@@ -24,34 +25,62 @@
 @endsection
 
 @section('mainContent')
-<h2>Lunga</h2>
-<ul>
-    @foreach ($lunga as $key => $prodotto)
-        <li>
-            <img src="{{$prodotto["src"]}}" alt="">
-            <h3>{{$prodotto["titolo"]}}</h3>
-            <a href="prodotti/show/{{$key}}"></a>
-        </li>
-    @endforeach
-</ul>
-<h2>Corta</h2>
-<ul>
-    @foreach ($corta as $key => $prodotto)
-        <li>
-            <img src="{{$prodotto["src"]}}" alt="">
-            <h3>{{$prodotto["titolo"]}}</h3>
-            <a href="prodotti/show/{{$key}}"></a>
-        </li>
-    @endforeach
-</ul>
-<h2>Cortissima</h2>
-<ul>
-    @foreach ($cortissima as $key => $prodotto)
-        <li>
-            <img src="{{$prodotto["src"]}}" alt="">
-            <h3>{{$prodotto["titolo"]}}</h3>
-            <a href="prodotti/show/{{$key}}"></a>
-        </li>
-    @endforeach
-</ul>
+<div class="main">
+    <div class="wrapper">
+        <section id="lunga">
+            <h2 class="section-title">Le lunghe</h2>
+            <ul class="list">
+                @foreach ($lunga as $key => $prodotto)
+                    <li class="list-item">
+                        <div class="image">
+                            <img src="{{$prodotto["src"]}}" alt="">
+                            <div class="image-overlay">
+                                <div class="image-overlay-link">
+                                    <a href="prodotti/show/{{$prodotto["id"]}}">
+                                        <h3>{{$prodotto["titolo"]}}</h3>
+                                    </a> 
+                                    <a href="prodotti/show/{{$prodotto["id"]}}">
+                                        <img src="{{asset('images/icon.svg')}}" alt="">
+                                    </a>    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                @endforeach
+            </ul>
+        </section>
+
+        <section id="corta">
+            <h2 class="section-title">Le corte</h2>
+            <ul class="list">
+                @foreach ($corta as $key => $prodotto)
+                    <li class="list-item">
+                        <div class="image">
+                            <img src="{{$prodotto["src"]}}" alt="">
+                            <div class="image-overlay">
+                                <a href="prodotti/show/{{$prodotto["id"]}}">{{$prodotto["titolo"]}}</a>
+                            </div>  
+                        </div>
+                    </li>
+                @endforeach
+            </ul>
+        </section>
+
+        <section id="cortissima">
+            <h2 class="section-title">Le cortissime</h2>
+            <ul class="list">
+                @foreach ($cortissima as $key => $prodotto)
+                    <li class="list-item">
+                        <div class="image">
+                            <img src="{{$prodotto["src"]}}" alt="">
+                            <div class="image-overlay">
+                                <a href="prodotti/show/{{$prodotto["id"]}}">{{$prodotto["titolo"]}}</a>
+                            </div>
+                        </div>
+                    </li>
+                @endforeach
+            </ul>
+        </section>
+    </div>
+</div>
 @endsection

@@ -6,6 +6,13 @@
   padding: 0;
 }
 
+h2 {
+  font-size: 28px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #00156E;
+}
+
 h3 {
   font-size: 25px;
   font-weight: normal;
@@ -18,7 +25,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1024px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -53,6 +60,71 @@ header .wrapper .nav-list-item a {
 
 header .wrapper .nav-list-item a.active {
   background-color: #B3E5FC;
+}
+
+.main {
+  background-image: url("/images/fondo-pag-speciali.jpg");
+  margin-top: 20px;
+  padding: 50px 0;
+}
+
+.main section .section-title {
+  padding: 5px;
+}
+
+.main section .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main section .list-item {
+  list-style: none;
+}
+
+.main section .list-item .image {
+  position: relative;
+  height: 230px;
+  margin: 5px;
+}
+
+.main section .list-item .image img {
+  display: block;
+  height: 100%;
+}
+
+.main section .list-item .image-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.main section .list-item .image-overlay-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.main section .list-item .image-overlay-link a {
+  font-size: 25px;
+  font-weight: light;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+}
+
+.main section .list-item .image-overlay-link a img {
+  height: 40px;
+}
+
+.main section .list-item .image:hover .image-overlay {
+  display: flex;
 }
 
 footer {

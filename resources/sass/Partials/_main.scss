@@ -1,0 +1,67 @@
+.main{
+    background-image: url('/images/fondo-pag-speciali.jpg');
+    margin-top: 20px;
+    padding: 50px 0;
+
+    section{
+        .section-title{
+            padding: 5px;
+        }
+        .list{
+            @include displayFlex;
+            flex-wrap: wrap;
+
+            &-item{
+                list-style: none;
+
+                .image{
+                    position: relative;
+                    height: 230px;
+                    margin: 5px;
+                    img{
+                        display: block;
+                        height: 100%;
+                    }
+
+                    &-overlay{
+                        display: none;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        background-color: rgba(0, 0, 0, 0.3);
+                        
+                        &-link{
+                            @include displayFlex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            margin: auto;
+                            
+                            a{
+                                font-size: 25px;
+                                font-weight: light;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                text-align: center;
+                                color: $overlayColorTxt;
+                               
+                                
+                                img{
+                                    height: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .image:hover {
+                    .image-overlay{
+                        @include displayFlex;
+                    }
+                }
+            }
+        }
+    }
+}
